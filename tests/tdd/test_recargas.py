@@ -46,3 +46,19 @@ def test_bonificacion_25_pct():
     r = calcular_recarga(30000)
     assert r["bonificacion_pct"] == 25
     assert r["datos_mb"] == 7500
+
+# -- PREMIUM --
+def test_premium_sin_bono_base():
+    r = calcular_recarga(5000, premium=True)
+    assert r["bonificacion_pct"] == 5
+    assert r["datos_mb"] == 250
+
+def test_premium_con_10pct():
+    r = calcular_recarga(10000, premium=True)
+    assert r["bonificacion_pct"] == 15
+    assert r["datos_mb"] == 1500
+
+def test_premium_con_25pct():
+    r = calcular_recarga(30000, premium=True)
+    assert r["bonificacion_pct"] == 30
+    assert r["datos_mb"] == 9000
