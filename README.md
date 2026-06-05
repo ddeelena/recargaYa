@@ -66,3 +66,7 @@ CP-07 | RQ-04 Bonificación 25% | Monto en clase de bonificación alta | Monto d
 CP-08 | RQ-05 Plan premium | Usuario premium sin bono base | Monto dentro del rango | monto=5000, premium=True1. | Llamar calcular_recarga(5000, premium=True)bonificacion_pct=5, datos_mb=250
 CP-09 | RQ-05 Plan premiumUsuario premium con bono 10% | Monto dentro del rangomonto=10000, premium=True1. | Llamar calcular_recarga(10000, premium=True)bonificacion_pct=15, datos_mb=1500
 CP-10 | RQ-05 Plan premium | suario premium con bono 25% |Monto dentro del rango | monto=30000, premium=True1. | Llamar calcular_recarga(30000, premium=True)bonificacion_pct=30, datos_mb=9000
+
+comandos
+
+tdd: uv run pytest -v
