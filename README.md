@@ -71,4 +71,5 @@ CP-10 | RQ-05 Plan premium | suario premium con bono 25% |Monto dentro del rango
 
 tdd: uv run pytest -v
 bdd: uv run pytest tests/bdd/steps/ -v
+fastApi: uv run uvicorn src.app:app --reload
 
