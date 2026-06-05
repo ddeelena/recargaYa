@@ -3,7 +3,7 @@ La empresa RecargaYa S.A.S. necesita un módulo para calcular el valor final de 
 
 Construye este módulo usando TDD con los ciclos Red-Green-Refactor visibles en los commits, 
 
-diseña una tabla de casos de prueba aplicando partición de equivalencia v valores límite para el campo de monto, escribe mínimo 5 escenarios BDD en Gherkin incluyendo un Scenario Outline, expón el módulo como API REST con FastAPI. 
+diseña una tabla de casos de prueba aplicando partición de equivalencia y valores límite para el campo de monto, escribe mínimo 5 escenarios BDD en Gherkin incluyendo un Scenario Outline, expón el módulo como API REST con FastAPI. 
 
 agrega un script de Locust que verifique que el P95 sea menor a 300ms con 30 usuarios simultáneos, 
 
@@ -67,6 +67,8 @@ CP-08 | RQ-05 Plan premium | Usuario premium sin bono base | Monto dentro del ra
 CP-09 | RQ-05 Plan premiumUsuario premium con bono 10% | Monto dentro del rangomonto=10000, premium=True1. | Llamar calcular_recarga(10000, premium=True)bonificacion_pct=15, datos_mb=1500
 CP-10 | RQ-05 Plan premium | suario premium con bono 25% |Monto dentro del rango | monto=30000, premium=True1. | Llamar calcular_recarga(30000, premium=True)bonificacion_pct=30, datos_mb=9000
 
-comandos
+## comandos
 
 tdd: uv run pytest -v
+bdd: uv run pytest tests/bdd/steps/ -v
+
