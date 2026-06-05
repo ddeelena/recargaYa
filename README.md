@@ -72,4 +72,6 @@ CP-10 | RQ-05 Plan premium | suario premium con bono 25% |Monto dentro del rango
 tdd: uv run pytest -v
 bdd: uv run pytest tests/bdd/steps/ -v
 fastApi: uv run uvicorn src.app:app --reload
+locust: uv run locust -f tests/locust/locusfile.py -u 50 -r 10 --run-time 30s --host http://localhost:8000
+
 

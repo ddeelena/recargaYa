@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
-from recarga import calcular_recarga, MONTO_MINIMO, MONTO_MAXIMO
+from src.recarga import calcular_recarga, MONTO_MINIMO, MONTO_MAXIMO
 
 app = FastAPI(
     title="RecargaYa API",
