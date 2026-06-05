@@ -12,17 +12,17 @@ y conecta todo en un pipeline de GitHub Actions que corra los tests en cada push
 La entrega es un repositorio GitHub público con el pipeline en verde y un README.md con los comandos para ejecutar cada tipo de prueba.
 
 Regla 1 — Validación de monto:
-  monto < $1.000   → RECHAZADA (error)
-  monto > $50.000  → RECHAZADA (error)
-  $1.000 - $50.000 → válida, continúa
+  monto < $1.000   -> RECHAZADA (error)
+  monto > $50.000  -> RECHAZADA (error)
+  $1.000 - $50.000 -> válida, continúa
 
 Regla 2 — Bonificación de datos:
-  $1.000 a $9.999  → 0% bonificación
-  $10.000 a $29.999 → 10% bonificación
-  $30.000 a $50.000 → 25% bonificación
+  $1.000 a $9.999  -> 0% bonificación
+  $10.000 a $29.999 -> 10% bonificación
+  $30.000 a $50.000 -> 25% bonificación
 
 Regla 3 — Plan premium:
-  premium=True → +5% ADICIONAL sobre la bonificación ya calculada
+  premium=True -> +5% ADICIONAL sobre la bonificación ya calculada
   (NO es 5% del monto, es 5% más encima del porcentaje)
 
 Particion 
@@ -73,5 +73,6 @@ tdd: uv run pytest -v
 bdd: uv run pytest tests/bdd/steps/ -v
 fastApi: uv run uvicorn src.app:app --reload
 locust: uv run locust -f tests/locust/locusfile.py -u 50 -r 10 --run-time 30s --host http://localhost:8000
+
 
 
