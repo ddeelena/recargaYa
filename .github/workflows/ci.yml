@@ -19,13 +19,13 @@ jobs:
         run: uv sync
 
       - name: Pruebas unitarias TDD
-        run: uv run pytest tests/test_recarga.py -v
+        run: uv run pytest tests/tdd/test_recarga.py -v
 
       - name: Pruebas de API
         run: uv run pytest tests/test_api.py -v
 
       - name: Pruebas BDD
-        run: uv run pytest tests/steps/ -v
+        run: uv run pytest tests/bdd/steps/ -v
 
   performance:
     runs-on: ubuntu-latest
