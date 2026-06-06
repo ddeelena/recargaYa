@@ -1,5 +1,5 @@
 import pytest
-from recarga import calcular_recarga
+from src.recarga import calcular_recarga
 
 # -- VALIDACIÓN --
 def test_monto_minimo_valido():
