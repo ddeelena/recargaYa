@@ -1,6 +1,6 @@
 import pytest
 from pytest_bdd import scenarios, given, when, then, parsers
-from recarga import calcular_recarga
+from src.recarga import calcular_recarga
 
 scenarios("../features/recarga.feature")
 
